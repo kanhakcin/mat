@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="particles-bg">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+    
+    <!-- Fotos em formato coração - 6 cantos -->
+    <div class="photo-heart top-right">
+        <img src="Zaida.jpeg" alt="Zaida" />
+        <span class="photo-name">Zaida</span>
+    </div>
+    <div class="photo-heart bottom-left">
+        <img src="Arfina.jpeg" alt="Arfina" />
+        <span class="photo-name">Arfina</span>
+    </div>
+    <div class="photo-heart top-left">
+        <img src="claudiney.jpeg" alt="Claudiney" />
+        <span class="photo-name">Claudiney</span>
+    </div>
+    <div class="photo-heart bottom-right">
+        <img src="Cristiano.jpeg" alt="Cristiano" />
+        <span class="photo-name">Cristiano</span>
+    </div>
+    <div class="photo-heart mid-left">
+        <img src="Gaspar.jpeg" alt="Gaspar" />
+        <span class="photo-name">Gaspar</span>
+    </div>
+    <div class="photo-heart mid-right">
+        <img src="Zé.jpeg" alt="Zé" />
+        <span class="photo-name">Zé</span>
+    </div>
+    
+    <div class="game-container">
+        <header class="game-header">
+            <div class="score-section">
+                <span class="label">Score</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="combo-section">
+                <span class="label">Combo</span>
+                <span class="value" id="combo">0</span>
+            </div>
+            <div class="highscore-section">
+                <span class="label">High Score</span>
+                <span class="value" id="highscore">0</span>
+            </div>
+            <div class="level-section">
+                <span class="label">Level</span>
+                <span class="value" id="level">Easy</span>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="problem-container">
+                <div class="bacame-title">BACAME</div>
+                <div class="problem-display" id="problem"></div>
+            <div class="input-section">
+                <input type="number" id="answer-input" placeholder="Digite sua resposta..." autocomplete="off">
+                <button id="submit-btn">Enviar</button>
+            </div>
+            <div class="timer-section">
+                <div class="timer-bar">
+                    <div class="timer-progress" id="timer-progress"></div>
+                </div>
+                <span class="timer-text" id="timer-text">10s</span>
+            </div>
+            </div>
+        </main>
+
+        <footer class="game-footer">
+            <button id="restart-btn" class="restart-btn">🔄 Reiniciar</button>
+        </footer>
+    </div>
+
+    <!-- Game Over Overlay -->
+    <div id="game-over-overlay" class="overlay hidden">
+        <div class="game-over-content">
+            <h2 id="final-score">Game Over!</h2>
+            <p>Score final: <span id="final-score-value">0</span></p>
+            <button id="play-again-btn">Jogar Novamente</button>
+        </div>
+    </div>
+
+<script src="js/game.js"></script>
+</body>
+</html>
+
